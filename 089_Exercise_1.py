@@ -1,18 +1,25 @@
 import random
 
 def gameWin(comp, you):
+    # If two values are equal, declare a tie!
     if (comp == you):
         return None
+    
+    # Check for all possibilities when computer choose s
     elif (comp == "s"):
         if (you == "w"):
             return False
         elif (you == "g"):
             return True
+        
+    # Check for all possibilities when computer choose w
     elif (comp == "w"):
         if (you == "g"):
             return False
         elif (you == "s"):
             return True
+        
+    # Check for all possibilities when computer choose g   
     elif (comp == "g"):
         if (you == "s"):
             return False
@@ -20,7 +27,7 @@ def gameWin(comp, you):
             return True
 
 
-print("Computer Turn: Snake(s) Water(w) or Gun(g)? ")
+print("Computer Turn: Snake(s) Water(w) or Gun(g)? --> s")
 randNo = random.randint(1, 3)
 
 if (randNo == 1):
@@ -30,7 +37,7 @@ elif (randNo == 2):
 elif (randNo == 3):
     comp = "g"
     
-you = input("Your Turn: Snake(s) Water(w) or Gun(g)? ").lower()
+you = input("Your Turn: Snake(s) Water(w) or Gun(g)? --> ").lower()
 a = gameWin(comp, you)
 
 print(f"Computer Choose: {comp}")    
