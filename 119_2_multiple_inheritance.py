@@ -14,6 +14,5 @@ class Programmer(Employee, Freelancer):
 
 p = Programmer()
 p.upgradeLevel()
-# print(p.level)
 print(p.level)
 print(p.company)
